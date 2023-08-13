@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Cormorant Garamond;
+    src: url(/fonts/CormorantGaramond-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto Mono;
+    src: url(/fonts/RobotoMono-Regular.ttf);
+}
+
+*{
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #EEE5D8;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--background-color);
+    transition: 1s ease;
+}
+
+
+
+.intro-home-container {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    
+}
+
+.intro-home {
+    position: absolute;
+    width: 100vh;
+    height: 77vh;
+    top: calc(50% - 38.5vh);
+    left: calc(50% - 50vh);
+}
+
+h1.quote{
+    position: absolute;
+    font-family: Cormorant Garamond;
+    font-weight: 400;
+    font-size: 10vh;
+    top: 0vh;
+    left: 0vh;
+    width: 90vh;
+    text-align: center;
+    z-index: 3;
+}
+
+h1.quote-credit{
+    position: absolute;
+    font-family: Cormorant Garamond;
+    font-weight: 500;
+    font-size: 4vh;
+    top: 23vh;
+    left: 20vh;
+    width: 90vh;
+    text-align: center;
+    z-index: 3;
+}
+
+.intro-home img {
+    position: absolute;
+    bottom: 5vh;
+    right: 15vh;
+    z-index: 2;
+    height: 60vh;
+}
+
+svg.arrow {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    right: 5vh;
+    width: 15vh;
+}
+
+div.top-bar {
+    z-index: 88;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh;
+}
+
+svg.hamburger {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    top: 2vh;
+    left: 2vh;
+}
+
+
+
+h1.btn {
+    border: 0.3vh #000000 solid;
+    width: fit-content;
+    padding: 1.2vh 2.5vh;
+    border-radius: 4vh;
+    font-family: Roboto Mono;
+    font-size: 2vh;
+    font-weight: 400;
+    transition: 200ms ease;
+    cursor: none;
+}
+
+h1.btn:hover {
+    background-color: #000000;
+    color: var(--background-color);
+    transition: 200ms ease;
+    margin-top: 0.5vh;
+    margin-right: 0.3vh;
+}
+
+h1.contact-btn {
+    position: absolute;
+    right: 2vh;
+    top: 1.5vh;
+}
+
+div.about-home {
+    width: 100vw;
+    height: 100vh;
+}
