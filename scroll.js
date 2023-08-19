@@ -8,7 +8,8 @@ scroll.on('scroll', (obj) => {
 });
 
 function pageHandler(deltaY) {
-    let pageNum = Math.floor(deltaY/window.innerHeight)
+    deltaY *= 1.1
+    let pageNum = Math.floor(deltaY/window.innerHeight);
     console.log(pageNum)
     switch (pageNum) {
         case 0:
@@ -16,6 +17,7 @@ function pageHandler(deltaY) {
             break
         case 1:
             document.documentElement.style.setProperty("--background-color", "#C6C6C6");
+            document.documentElement.style.setProperty("--about-state", "running");
             break;
         case 2:
             document.documentElement.style.setProperty("--background-color", "#FFFFFF");            
