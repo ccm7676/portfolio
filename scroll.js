@@ -16,7 +16,7 @@ function writeAnim(){
         programmingTxt.innerHTML += typeText.charAt(charCounter);
         charCounter += 1;
         runagain = false;
-        setTimeout(()=>{runagain=true; writeAnim()}, 100);
+        setTimeout(()=>{runagain=true; writeAnim()}, 50);
     }
         
 };
@@ -41,6 +41,7 @@ function pageHandler(deltaY) {
             break;
         case 3:
             document.documentElement.style.setProperty("--background-color", "#C4C9D3");
+            document.documentElement.style.setProperty("--music-state", "running");    
             break;
         case 4:
             document.documentElement.style.setProperty("--background-color", "#FFFFFF");

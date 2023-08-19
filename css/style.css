@@ -23,6 +23,7 @@
     --background-color: #EEE5D8;
     --about-state: paused;
     --proj-state: paused;
+    --music-state: paused;
 }
 
 body {
@@ -185,6 +186,7 @@ div.about-home {
     top: 25vh;
     left: 10vh;
     height: 60vh;
+    box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
 }
 
 .about-txt {
@@ -209,6 +211,7 @@ h1.read-more {
     width: 40vh;
     right: 30vh;
     top: 15vh;
+    box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
 }
 
 .proj-title {
@@ -248,6 +251,34 @@ h1.read-more {
     right: 25vh;
     animation: textload 1s ease;
     animation-play-state: var(--proj-state);
+}
+
+.music-img {
+    position: absolute;
+    top: calc(50% - 30vh);
+    left: 15vh;
+    width: 60vh;
+    box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
+    animation: imfade 1s ease;
+    animation-play-state: var(--music-state);
+}
+
+.music-txt {
+    position: absolute;
+    top: calc(50% - 28vh);
+    right: 10vh;
+    width: 65vh;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    font-size: 1.8vh;
+    text-align: justify;
+}
+
+.listen {
+    position: absolute;
+    right: 53vh;
+    top: calc(50% + 2vh);
+    padding: 1.2vh 7vh !important;
 }
 @keyframes drawline {
     0%{
@@ -292,3 +323,13 @@ h1.read-more {
     
 }
 
+@keyframes imfade {
+    0% {
+        opacity: 0;
+        filter: contrast(0);
+    }
+    100% {
+        opacity: 1;
+        filter: contrast(1);
+    }
+}
