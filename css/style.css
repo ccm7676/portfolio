@@ -151,7 +151,7 @@ h1.contact-btn {
     top: 1.5vh;
 }
 
-div.about-home {
+div.page {
     width: 100vw;
     height: 100vh;
 }
@@ -193,6 +193,8 @@ div.about-home {
     left: 10vh;
     height: 60vh;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
+    transition: 1s ease;
+    
 }
 
 .about-txt {
@@ -203,12 +205,61 @@ div.about-home {
     width: 75vh;
     font-family: Roboto Mono;
     font-size: 1.8vh;
+    transition: 1s ease;
+}
+
+.about-txt-ext {
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    top: 30vh;
+    right: 10vh;
+    text-align: justify;
+    width: 60vh;
+    font-family: Roboto Mono;
+    font-size: 1.8vh;
+}
+
+
+.about-txt-ext.about-more {
+    opacity: 1;
+    pointer-events: initial;
+    position: absolute;
+    top: 30vh;
+    right: 10vh;
+    text-align: justify;
+    width: 60vh;
+    font-family: Roboto Mono;
+    font-size: 1.8vh;
+    transition: 1s ease;
+}
+
+
+.about-txt.about-more {
+    right: 78vh;
+    transition: 1s ease;
+}
+.about-img.about-more {
+    left: -100vh;
+    transition: 1s ease;
+}
+
+.shifted-border.about-more {
+    left: -100vh;
+    transition: 1s ease;
+}
+
+h1.read-more.about-more {
+    left: 10vh;
+    transition: 1s ease;
 }
 
 h1.read-more {
     position: absolute;
     top: 55vh;
     right: 69vh;
+    transition: 1s ease;
 
 }
 
