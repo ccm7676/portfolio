@@ -331,6 +331,46 @@ h1.read-more {
 
 }
 
+.bottom-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    background-color: #000000;
+}
+
+.bottom-home a {
+    display: flex;
+    border: #FFFFFF 0.3vh solid;
+    border-radius: 10vh;
+    padding: 1.2vh;
+    width: 20vh;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 2vh;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 10vh;
+    margin-top: 4vh;
+    transition: 0.3s ease;
+}
+
+.bottom-home a:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 2vh;
+    left: 2vh;
+    color: #FFFFFF;
+    font-size: 2vh;
+    font-family: Arial;
+    font-weight: 400;
+}
 @keyframes drawline {
     0%{
         width: 0%;
