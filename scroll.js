@@ -45,6 +45,7 @@ function pageHandler(deltaY) {
             break;
         case 4:
             document.documentElement.style.setProperty("--background-color", "#FFFFFF");
+            document.documentElement.style.setProperty("--photo-state", "running");   
             break;
 
     }
