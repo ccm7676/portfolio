@@ -30,11 +30,63 @@
     --proj-state: paused;
     --music-state: paused;
     --photo-state: paused;
+    --menu-state: none;
 }
 
 body {
     height: 100vh;
     background-color: var(--background-color);
+    transition: 1s ease;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 87;
+    width: 100%;
+    height: 100%;  
+    background-color: var(--background-color);
+    clip-path: circle(0vh at top left);
+    animation-name: var(--menu-state);
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.menu a {
+    font-size: 25vh;
+    font-family: Helvetica-Compressed;
+    margin-top: 8vh;
+    margin-left: 8vh;
+    font-weight: 400;
+    color: var(--background-color);
+    -webkit-text-stroke: 0.3vh #000000;
+    text-stroke: 0.3vh #000000;
+    transition: 0.2s ease;
+    text-decoration: none;
+    
+}
+
+.menu a:hover .active {
+    color: #f70000 !important;
+    transition: 0.2s ease;
+}
+
+.menu a:hover {
+    color: #000000;
+    transition: 0.2s ease;
+    cursor: none;
+}
+
+.menu a.active {
+    color: #000000;
+    transition: 0.2s ease;
+}
+
+
+.xhide {
     transition: 1s ease;
 }
 
@@ -252,14 +304,12 @@ div.page {
 
 h1.read-more.about-more {
     left: 10vh;
-    transition: 1s ease;
 }
 
 h1.read-more {
     position: absolute;
     top: 55vh;
     right: 69vh;
-    transition: 1s ease;
 
 }
 
@@ -487,5 +537,25 @@ h1.read-more {
         filter: brightness(1);
         text-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.25);
         opacity: 1;
+    }
+}
+
+@keyframes showmenu {
+    0%{
+        clip-path: circle(0vh at top left);
+    }
+
+    100%{
+        clip-path: circle(300vh at top left);
+    }
+}
+
+@keyframes hidemenu {
+    0%{
+        clip-path: circle(300vh at top left);
+    }
+
+    100%{
+        clip-path: circle(0vh at top left);
     }
 }
