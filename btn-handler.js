@@ -2,8 +2,31 @@ const readMoreBtn = document.querySelector(".read-more");
 const aboutPage = document.querySelector(".about-home");
 const menuBtn = document.querySelector("svg.hamburger");
 const hideDots = document.querySelectorAll(".xhide");
+const pageBtns = document.querySelectorAll(".menu a")
 
 
+let activeElement = document.querySelector(".menu a.active")
+pageBtns.forEach((el) => {
+    el.addEventListener("click", ()=> {
+
+        let docStyle = document.documentElement.style;
+        let urlPath = el.innerHTML.toLowerCase() == "home" ? "" : "#" + el.innerHTML.toLocaleLowerCase();
+
+        window.history.pushState("page", "Title", "/" + urlPath);
+
+        activeElement.classList.remove("active")
+        activeElement = el;
+        
+        el.classList.add("active");
+
+        docStyle.setProperty("--menu-state", "hidemenu");
+
+        hideDots.forEach((el) => {
+            el.style.opacity = 1;
+        }); 
+
+    }) 
+})  
 
 menuBtn.addEventListener("click", () => {
     let docStyle = document.documentElement.style;
