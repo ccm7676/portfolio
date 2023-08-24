@@ -167,12 +167,31 @@ div.top-bar {
     animation: textload 1s ease 0.5s forwards;
 }
 
+
 svg.hamburger {
     position: absolute;
     width: 4vh;
     height: 4vh;
     top: 2vh;
     left: 2vh;
+}
+
+
+svg.hamburger ellipse:nth-child(6) {animation-delay: 0.1s}
+svg.hamburger ellipse:nth-child(5) {animation-delay: 0.2s}
+svg.hamburger ellipse:nth-child(9) {animation-delay: 0.2s}
+svg.hamburger ellipse:nth-child(4) {animation-delay: 0.3s}
+svg.hamburger ellipse:nth-child(8) {animation-delay: 0.3s}
+svg.hamburger ellipse:nth-child(3) {animation-delay: 0.3s}
+svg.hamburger ellipse:nth-child(2) {animation-delay: 0.4s}
+svg.hamburger ellipse:nth-child(7) {animation-delay: 0.4s}
+svg.hamburger ellipse:nth-child(1) {animation-delay: 0.5s}
+
+svg.hamburger:hover ellipse {
+    animation-name: imfade;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
 }
 
 

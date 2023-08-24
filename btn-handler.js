@@ -6,6 +6,8 @@ const pageBtns = document.querySelectorAll(".menu a")
 
 
 let activeElement = document.querySelector(".menu a.active")
+
+//makes every menu btn active when clicked and sets the url 
 pageBtns.forEach((el) => {
     el.addEventListener("click", ()=> {
 
@@ -28,6 +30,7 @@ pageBtns.forEach((el) => {
     }) 
 })  
 
+//shows the menu when hamburger is clicked
 menuBtn.addEventListener("click", () => {
     let docStyle = document.documentElement.style;
 
@@ -46,13 +49,14 @@ menuBtn.addEventListener("click", () => {
         docStyle.setProperty("--menu-state", "showmenu")
 
         hideDots.forEach((el) => {
-            el.style.opacity = 0;
+            el.style.setProperty("opacity","0", "important");
         }); 
 
     }
         
 })
 
+//Shows the extra text when read more is clicked 
 readMoreBtn.addEventListener("click", () => {
     if(readMoreBtn.innerHTML == "READ MORE"){
         
