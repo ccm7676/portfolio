@@ -170,10 +170,29 @@ div.top-bar {
 
 svg.hamburger {
     position: absolute;
-    width: 4vh;
-    height: 4vh;
-    top: 2vh;
-    left: 2vh;
+    width: 3.5vh;
+    height: 3.5vh; 
+    top: calc(50% - 1.75vh);
+    left: calc(50% - 1.75vh);
+}
+
+svg.ham-container ellipse {
+    transition: 0.5s ease;
+}
+.ham-container {
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    width: 3.5vh;
+    height: 3.5vh; 
+    padding: 3.5vh;
+    border-radius: 10vh;
+    background-color: #00000000;
+    transition: 0.5s ease;
+}
+
+.ham-container:hover {
+    background-color: #000000;
 }
 
 
@@ -187,11 +206,11 @@ svg.hamburger ellipse:nth-child(2) {animation-delay: 0.4s}
 svg.hamburger ellipse:nth-child(7) {animation-delay: 0.4s}
 svg.hamburger ellipse:nth-child(1) {animation-delay: 0.5s}
 
-svg.hamburger:hover ellipse {
-    animation-name: imfade;
+.ham-container:hover svg.hamburger ellipse {
+    animation-name: circlepop;
     animation-duration: 0.4s;
     animation-timing-function: linear;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
 }
 
 
@@ -576,5 +595,15 @@ h1.read-more {
 
     100%{
         clip-path: circle(0vh at top left);
+    }
+}
+
+@keyframes circlepop {
+    0% {
+        fill: #000000;
+    }
+
+    100% {
+        fill: var(--background-color);
     }
 }

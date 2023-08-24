@@ -1,6 +1,6 @@
 const readMoreBtn = document.querySelector(".read-more");
 const aboutPage = document.querySelector(".about-home");
-const menuBtn = document.querySelector("svg.hamburger");
+const menuBtn = document.querySelector(".ham-container");
 const hideDots = document.querySelectorAll(".xhide");
 const pageBtns = document.querySelectorAll(".menu a")
 
@@ -49,7 +49,7 @@ menuBtn.addEventListener("click", () => {
         docStyle.setProperty("--menu-state", "showmenu")
 
         hideDots.forEach((el) => {
-            el.style.setProperty("opacity","0", "important");
+            el.style.setProperty("opacity","0");
         }); 
 
     }
