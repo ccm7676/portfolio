@@ -520,6 +520,20 @@ h1.read-more {
     }
 }
 
+.sec-page{
+    display: block;
+    position: absolute;
+    z-index: 80;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.projects-page {
+    background-color: #FFFFFF;
+    left: 100vw;
+}
 
 @keyframes unblur {
     0% {
