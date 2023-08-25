@@ -1,7 +1,8 @@
 const cursor = document.querySelector(".cursor-container");
-const mainBtns = document.querySelectorAll(".btn");
-let Btns = Array.from(mainBtns);
-Btns.push(document.querySelector(".ham-container"))
+const mainBtns = Array.from(document.querySelectorAll(".btn"));
+const menuBtns = Array.from(document.querySelectorAll(".menu a"));
+let Btns = mainBtns.concat(menuBtns);
+Btns.push(document.querySelector(".ham-container"));
 
 window.addEventListener("mousemove", (e) => {
     let vh = window.innerHeight/100;
