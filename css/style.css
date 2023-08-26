@@ -25,6 +25,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
     --background-color: #EEE5D8;
     --about-state: paused;
@@ -34,6 +36,24 @@
     --menu-state: none;
     --cursor-state: hidecursor;
 }
+
+.loading {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #EEE5D8;
+    z-index: 98;
+    overflow: hidden;
+}
+
+.loading .logo {
+    position: absolute;
+    height: 11vh;
+    width: 20vh;
+}
+
 
 body {
     height: 100vh;
