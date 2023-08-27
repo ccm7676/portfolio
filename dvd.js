@@ -1,7 +1,7 @@
 const logo = document.querySelector(".logo");
 
-let movX = 3;
-let movY = 3;
+let movX = window.innerWidth/100;
+let movY = window.innerWidth/100;
 
 
 
@@ -10,26 +10,42 @@ function dvdAnimate() {
 
     let curX = logoRect.left;
     let curY = logoRect.top;
-    let logoHeight = logoRect.height;
-    let logoWidth = logoRect.width;
 
-    if(curY + logoHeight >= window.innerHeight || curY < 0) {
+    let fullH = curY + logoRect.height;
+    let fullW = curX + logoRect.width;
+
+    let winH = window.innerHeight;
+    let winW = window.innerWidth;
+
+    let tmpX = movX;
+    let tmpY = movY;
+
+    if(fullH >= winH || curY < 0) {
         movY *= -1;
-        console.log("doogly")
     }
-
-    if(curX + logoWidth >= window.innerWidth || curX < 0) {
+    if(fullW >= winW || curX < 0) {
         movX *= -1;
-        console.log("doox")
     }
     
 
+    if(fullH + tmpY - winH > 0){
+        tmpY = fullH + tmpY - winH;
+    }
+    else if(curY + tmpY < 0) {
+        tmpY = curY - tmpY;
+    }
+    if(fullW + tmpX - winW > 0){
+        tmpX = fullW + tmpX - winW;
+    }
+    else if(curX + tmpX < 0) {
+        tmpX = curX - tmpX;
+    }
     
     logo.style.left = curX + movX
     logo.style.top = curY + movY;
 
     
-    setTimeout(dvdAnimate,25);
+    setTimeout(dvdAnimate,100);
 
 }
 
