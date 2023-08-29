@@ -35,10 +35,14 @@
     --photo-state: paused;
     --menu-state: none;
     --cursor-state: hidecursor;
+    --load-state: loadlogo;
 }
 
 .loading {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -46,13 +50,19 @@
     background-color: #EEE5D8;
     z-index: 98;
     overflow: hidden;
+    transition: 0.5s ease;
 }
 
 .loading .logo {
-    position: absolute;
-    height: 11vh;
-    width: 20vh;
-    transition: 100ms linear;
+    height: 14.3vh;
+    width: 26vh;
+    fill-opacity: 1;
+    stroke: #00000000;
+    stroke-width: 0;
+    stroke-dasharray: 0;
+    transition: 1s linear;
+    animation: var(--load-state) 2s linear infinite;
+
 }
 
 
@@ -701,4 +711,43 @@ h1.read-more {
         height: 0vh;
     }
     
+}
+
+@keyframes loadlogo {
+    0% {
+        stroke-dashoffset: 0vh;
+        fill-opacity: 0;
+        stroke: #000000;
+        stroke-width: 0.1vh;
+        stroke-dasharray: 5vh;
+    }
+    100% {
+        stroke-dashoffset: 10vh;
+        fill-opacity: 0;
+        stroke: #000000;
+        stroke-width: 0.1vh;
+        stroke-dasharray: 5vh;
+    }
+}
+@keyframes finishload {
+    0% {
+        fill-opacity: 0;
+        stroke: #000000;
+        stroke-width: 0.1vh;
+        stroke-dasharray: 5vh;
+    }
+
+    50% {
+        fill-opacity: 0;
+        stroke: #000000;
+        stroke-width: 0.1vh;
+        stroke-dasharray: 0vh;
+    }
+
+    100% {
+        fill-opacity: 1;
+        stroke: #000000;
+        stroke-width: 0vh;
+        stroke-dasharray: 0vh;
+    }
 }

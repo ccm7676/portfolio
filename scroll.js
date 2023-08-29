@@ -1,8 +1,20 @@
 const programmingTxt = document.querySelector(".proj-title");
+const loadingContainer = document.querySelector(".loading");
+
 var scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("hhello")
+    setTimeout(() => {
+        document.documentElement.style.setProperty("--load-state", "finishload"); 
+        loadingContainer.children[0].style.setProperty("animation-iteration-count", "1");
+        setTimeout(()=>{loadingContainer.style.setProperty("opacity", "0"); loadingContainer.style.setProperty("pointer-events", "none")},2000);
+    }, 1000);
+})
 
 scroll.on('scroll', (obj) => {
     pageHandler(obj.delta.y)
@@ -50,3 +62,4 @@ function pageHandler(deltaY) {
 
     }
 }
+
