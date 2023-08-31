@@ -2,8 +2,11 @@ const readMoreBtn = document.querySelector(".read-more");
 const aboutPage = document.querySelector(".about-home");
 const menuBtn = document.querySelector(".ham-container");
 const hideDots = document.querySelectorAll(".xhide");
-const pageBtns = document.querySelectorAll(".menu a")
+const pageBtns = document.querySelectorAll(".menu a");
 
+const projBtn = document.querySelector(".view-proj");
+const projImg = document.querySelector(".proj-img");
+const projPage = document.querySelector(".proj-home");
 
 let activeElement = document.querySelector(".menu a.active")
 
@@ -75,5 +78,11 @@ readMoreBtn.addEventListener("click", () => {
         readMoreBtn.innerHTML = "READ MORE";
         
     }
+
+})
+
+projBtn.addEventListener("click", ()=> {
+    scroll.scrollTo(projPage);
+    document.documentElement.style.setProperty("--proj-page", "show-proj");
 
 })

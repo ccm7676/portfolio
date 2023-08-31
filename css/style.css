@@ -36,6 +36,7 @@
     --menu-state: none;
     --cursor-state: hidecursor;
     --load-state: loadlogo;
+    --proj-page: none;
 }
 
 .loading {
@@ -57,7 +58,7 @@
     height: 14.3vh;
     width: 26vh;
     fill-opacity: 1;
-    stroke: #00000000;
+    stroke: #EEE5D800;
     stroke-width: 0;
     stroke-dasharray: 0;
     transition: 1s linear;
@@ -415,9 +416,27 @@ h1.read-more {
 .proj-img {
     position: absolute;
     width: 40vh;
+    height: 60vh;
     right: 30vh;
     top: 15vh;
+    z-index: 78;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
+    background-image: url("/media/AQ8A4910.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: var(--proj-page) 1s ease forwards;
+}
+
+.blur-page {
+    position: absolute;
+    width: 40vh;
+    height: 60vh;
+    right: 30vh;
+    top: 15vh;
+    z-index: 79;
+    animation: var(--proj-page) 1s ease forwards;
+    pointer-events: none;
 }
 
 .proj-title {
@@ -464,7 +483,12 @@ h1.read-more {
     top: calc(50% - 30vh);
     left: 15vh;
     width: 60vh;
+    height: 60vh;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
+    background-image: url("/media/cover.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     animation: imfade 1s ease;
     animation-play-state: var(--music-state);
 }
@@ -739,15 +763,34 @@ h1.read-more {
 
     50% {
         fill-opacity: 0;
-        stroke: #000000;
+        stroke: #EEE5D800;
         stroke-width: 0.1vh;
         stroke-dasharray: 0vh;
     }
 
     100% {
         fill-opacity: 1;
-        stroke: #000000;
+        stroke: #EEE5D800;
         stroke-width: 0vh;
         stroke-dasharray: 0vh;
+    }
+}
+
+@keyframes show-proj {
+    0% {
+        width: 40vh;
+        height: 60vh;
+        backdrop-filter: blur(0) brightness(1);
+        top: 15vh;
+        right: 30vh;
+    }
+
+    100% {
+        backdrop-filter: blur(3vh) brightness(1.5);
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: unset;
     }
 }
