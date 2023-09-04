@@ -29,6 +29,7 @@
 
 :root {
     --background-color: #EEE5D8;
+    --fg-color: #000000;
     --about-state: paused;
     --proj-state: paused;
     --music-state: paused;
@@ -238,8 +239,9 @@ svg.hamburger {
     left: calc(50% - 1.75vh);
 }
 
-svg.ham-container ellipse {
+svg.hamburger ellipse {
     transition: 0.5s ease;
+    fill: var(--fg-color);
 }
 .ham-container {
     position: absolute;
@@ -278,7 +280,7 @@ svg.hamburger ellipse:nth-child(1) {animation-delay: 0.5s}
 
 
 h1.btn {
-    border: 0.3vh #000000 solid;
+    border: 0.3vh var(--fg-color) solid;
     width: fit-content;
     padding: 1.2vh 2.5vh;
     border-radius: 4vh;
@@ -287,10 +289,12 @@ h1.btn {
     font-weight: 400;
     transition: 200ms ease;
     cursor: none;
+    color: var(--fg-color);
 }
 
 h1.btn:hover {
     background-color: #000000;
+    border: 0.3vh #000000 solid;
     color: var(--background-color);
     transition: 200ms ease;
     margin-top: 0.5vh;
@@ -780,13 +784,13 @@ h1.read-more {
     0% {
         width: 40vh;
         height: 60vh;
-        backdrop-filter: blur(0) brightness(1);
+        backdrop-filter: blur(0);
         top: 15vh;
         right: 30vh;
     }
 
     100% {
-        backdrop-filter: blur(3vh) brightness(1.5);
+        backdrop-filter: blur(3vh);
         top: 0;
         right: 0;
         width: 100vw;
