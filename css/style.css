@@ -425,7 +425,20 @@ h1.read-more {
     top: 15vh;
     z-index: 78;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
-    background-image: url("/media/AQ8A4910.png");
+    background-image: url("/media/AQ8A4910.avif");
+    background-image: image-set(
+        url("/media/AQ8A4910.avif") type("image/avif"),
+        url("/media/AQ8A4910.png") type("image/png"));
+    background-image: -webkit-image-set(
+        url("/media/AQ8A4910.avif") 4x, 
+        url("/media/AQ8A4910_2363.avif") 2x, 
+        url("/media/AQ8A4910_1181.avif") 1x, 
+        url("/media/AQ8A4910_591.avif") 0.5x);
+    background-image: image-set(
+        url("/media/AQ8A4910.avif") 4x, 
+        url("/media/AQ8A4910_2363.avif") 2x, 
+        url("/media/AQ8A4910_1181.avif") 1x, 
+        url("/media/AQ8A4910_591.avif") 0.5x,);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
