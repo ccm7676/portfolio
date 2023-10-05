@@ -4,10 +4,6 @@ const menuBtn = document.querySelector(".ham-container");
 const hideDots = document.querySelectorAll(".xhide");
 const pageBtns = document.querySelectorAll(".menu a");
 
-const projBtn = document.querySelector(".view-proj");
-const projImg = document.querySelector(".proj-img");
-const projPage = document.querySelector(".proj-home");
-
 let activeElement = document.querySelector(".menu a.active")
 
 //makes every menu btn active when clicked and sets the url 
@@ -78,11 +74,5 @@ readMoreBtn.addEventListener("click", () => {
         readMoreBtn.innerHTML = "READ MORE";
         
     }
-
-})
-
-projBtn.addEventListener("click", ()=> {
-    scroll.scrollTo(projPage);
-    document.documentElement.style.setProperty("--proj-page", "show-proj");
 
 })

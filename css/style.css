@@ -209,6 +209,7 @@ h1.quote-credit{
     animation: unblur 0.5s ease;
 }
 
+
 svg.arrow {
     position: absolute;
     z-index: 3;
@@ -301,11 +302,6 @@ h1.btn:hover {
     margin-right: 0.3vh;
 }
 
-h1.contact-btn {
-    position: absolute;
-    right: 2vh;
-    top: 1.5vh;
-}
 
 div.page {
     width: 100vw;
@@ -544,7 +540,23 @@ h1.read-more {
     letter-spacing: 0.5vh;
     text-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.25);
     line-height: 10vh;
-    background: url(/media/Moon-1.jpg);
+
+    background-image: url("/media/Moon-1.avif");
+    background-image: image-set(
+        url("/media/Moon-1.avif") type("image/avif"),
+        url("/media/Moon-1.jpg") type("image/jpg"));
+    background-image: -webkit-image-set(
+        url("/media/Moon-1.avif") 4x, 
+        url("/media/Moon-1_HALF.avif") 2x, 
+        url("/media/Moon-1_QUARTER.avif") 1x, 
+        url("/media/Moon-1_EIGHTH.avif") 0.5x);
+    background-image: image-set(
+	url("/media/Moon-1.avif") 4x, 
+        url("/media/Moon-1_HALF.avif") 2x, 
+        url("/media/Moon-1_QUARTER.avif") 1x, 
+        url("/media/Moon-1_EIGHTH.avif") 0.5x);
+       
+
     background-position: center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
