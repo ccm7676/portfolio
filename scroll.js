@@ -1,5 +1,6 @@
 const programmingTxt = document.querySelector(".proj-title");
 const loadingContainer = document.querySelector(".loading");
+const fadeElems = document.querySelectorAll(".fadefx");
 
 var scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
@@ -8,7 +9,6 @@ var scroll = new LocomotiveScroll({
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("hhello")
     setTimeout(() => {
         document.documentElement.style.setProperty("--load-state", "finishload"); 
         loadingContainer.children[0].style.setProperty("animation-iteration-count", "1");
@@ -63,3 +63,17 @@ function pageHandler(deltaY) {
     }
 }
 
+const observer = new IntersectionObserver((e) => {
+
+    e.forEach((entry) => {
+        console.log("hello")
+        if(entry.isIntersecting) {
+            entry.target.classList.add("fadein")
+        }
+        else {
+            entry.target.classList.remove("fadein");
+        }
+    })
+})
+
+fadeElems.forEach((el) => observer.observe(el));

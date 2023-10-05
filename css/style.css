@@ -209,6 +209,16 @@ h1.quote-credit{
     animation: unblur 0.5s ease;
 }
 
+.intro-home img::after {
+    display: flex;
+    content: "";
+    background-color: #000000;
+    width: 80%;
+    height: 1vh;
+    margin-left: -35vh;
+    border-radius: 35vh;
+}
+
 
 svg.arrow {
     position: absolute;
@@ -584,6 +594,16 @@ h1.read-more {
 
 }
 
+
+
+.fadefx {
+    opacity: 0;
+}
+
+.fadein {
+    opacity: 1;
+    transition: 1s ease;
+}
 .bottom-home {
     display: flex;
     flex-direction: row;
