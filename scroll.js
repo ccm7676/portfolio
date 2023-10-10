@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty("--load-state", "finishload"); 
         loadingContainer.children[0].style.setProperty("animation-iteration-count", "1");
         setTimeout(()=>{loadingContainer.style.setProperty("opacity", "0"); loadingContainer.style.setProperty("pointer-events", "none")},2000);
-    }, 2000);
+    }, 500);
 })
 
 scroll.on('scroll', (obj) => {
