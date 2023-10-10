@@ -1,6 +1,6 @@
 const programmingTxt = document.querySelector(".proj-title");
 const loadingContainer = document.querySelector(".loading");
-const fadeElems = document.querySelectorAll(".fadefx");
+const fadeElems = document.querySelectorAll(".animfx");
 const aboutTitle = document.querySelector(".about-title")
 
 var scroll = new LocomotiveScroll({
@@ -67,16 +67,7 @@ function pageHandler(deltaY) {
 const observer = new IntersectionObserver((e) => {
 
     e.forEach((entry) => {
-        if(entry.target.classList.contains("fadefx")) {
-            if(entry.isIntersecting) {
-                entry.target.classList.add("fadein");
-            }
-            else {
-                entry.target.classList.remove("fadein");
-            }
-        }
-
-        if(entry.target.classList.contains("about-title")) {
+        if(entry.target.classList.contains("animfx")) {
             if(entry.isIntersecting) {
                 entry.target.classList.add("anim");
             }

@@ -30,7 +30,6 @@
 :root {
     --background-color: #EEE5D8;
     --fg-color: #000000;
-    --about-state: paused;
     --proj-state: paused;
     --music-state: paused;
     --photo-state: paused;
@@ -350,8 +349,11 @@ div.page {
     width: 40vh;
     border: 0.5vh solid #000000;
     border-radius: 0.3vh;
+    
+}
+
+.shifted-border.anim {
     animation: shift 1s ease;
-    animation-play-state: var(--about-state);
 }
 
 .about-img {
@@ -605,7 +607,7 @@ h1.read-more {
     opacity: 0;
 }
 
-.fadein {
+.anim {
     opacity: 1;
     transition: 1s ease;
 }
