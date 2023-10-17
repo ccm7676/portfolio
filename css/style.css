@@ -209,18 +209,6 @@ h1.quote-credit{
     animation: unblur 0.5s ease;
 }
 
-.intro-home img::after {
-    content: "";
-    display: inline-block;
-    cursor: pointer;
-    width: 10px;
-    height: 10px;
-    background-color: #000000;
-  
-    margin-left: -35vh;
-    border-radius: 35vh;
-}
-
 
 svg.arrow {
     position: absolute;
@@ -688,6 +676,59 @@ h1.read-more {
 .projects-page {
     background-color: #FFFFFF;
     left: 100vw;
+}
+
+@media screen and (max-width: 950px){ 
+
+    .intro-home {
+        width: 100vw;
+        height: 100vh;
+        top: 10vh;
+        left: 0;
+    }
+
+    h1.quote {
+        width: 100%;
+        font-size: 5vh;
+        margin: 0;
+    }
+
+    h1.quote-credit {
+        font-size: 3vh;
+        top: 12vh;
+        left: 0;
+        width: 100%;
+    }
+
+    .intro-home img {
+        width: 90%;
+        right: 5%;
+        bottom: 20vh;
+        height: unset;
+        aspect-ratio: 2 / 3 !important;
+        max-height: 80%;
+    }
+
+    svg.arrow {
+        bottom: 15vh;
+    }
+
+    .about-title {
+        width: 100%;
+        font-size: 7vh;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .about-title::after {
+        margin: 5vw;
+        margin-top: -1vh;
+    }
+
+    .shifted-border {
+        display: none;
+    }
 }
 
 @keyframes unblur {
