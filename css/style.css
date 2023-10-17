@@ -719,12 +719,14 @@ h1.read-more {
     }
 
     .about-img{
-        top: 15vh;
+        top: 11vh;
         left: 5vw;
         width: 90%;
-        max-width: unset;
-        max-height: 40%;
+        height: unset;
         aspect-ratio: 2 / 3 !important;
+        max-width: unset;
+        max-height: 50%;
+        
         
     }
 
@@ -734,10 +736,10 @@ h1.read-more {
 
     .about-txt{
         width: 90%;
-        top: 60vh;
+        top: 63vh;
         left: 5vw;
         max-width: unset;
-        font-size: 1.5vh;
+        font-size: 1.3vh;
     }
 
     .about-txt-ext {
