@@ -348,10 +348,11 @@ div.page {
     position: absolute;
     top: 22vh;
     left: 13vh;
-    height: 60vh;
+    aspect-ratio: 2 / 3;
     width: 40vh;
     border: 0.5vh solid #000000;
     border-radius: 0.3vh;
+    max-width: 30%;
     
 }
 
@@ -366,7 +367,7 @@ div.page {
     width: 40vh;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
     transition: 1s ease;
-    
+    max-width: 30%;
 }
 
 .about-txt {
@@ -431,16 +432,17 @@ h1.read-more.about-more {
 
 h1.read-more {
     position: absolute;
-    top: 65vh;
+    top: calc(78vh - 8vw);
     left: 47%;
 }
 
 .proj-img {
     position: absolute;
+    aspect-ratio: 2 / 3 !important;
     width: 40vh;
-    height: 60vh;
     right: calc(5% + 6vh);
-    top: 15vh;
+    top: calc(30vh - 10vw);
+    max-width: 30%;
     z-index: 78;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
     background-image: url("/media/AQ8A4910.avif");
@@ -506,9 +508,10 @@ h1.read-more {
 .dotted-dropshadow {
     position: absolute;
     width: 40vh;
-    height: 60vh;
+    aspect-ratio: 2 / 3 !important;
+    max-width: 30%;
     background: url(/media/dots.png) top right / 3vh 3vh ;
-    top: 10vh;
+    top: calc(25vh - 10vw);
     right: 5%;
     animation: textload 1s ease;
     animation-play-state: var(--proj-state);
