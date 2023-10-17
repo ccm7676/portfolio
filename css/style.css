@@ -388,14 +388,6 @@ div.page {
 .about-txt-ext.about-more {
     opacity: 1;
     pointer-events: initial;
-    position: absolute;
-    top: 30vh;
-    right: 10vh;
-    max-width: 40%;
-    text-align: justify;
-    width: 60vh;
-    font-family: Roboto Mono;
-    font-size: 1.8vh;
     transition: 1s ease;
 }
 
@@ -726,8 +718,45 @@ h1.read-more {
         margin-top: -1vh;
     }
 
+    .about-img{
+        top: 15vh;
+        left: 5vw;
+        width: 90%;
+        max-width: unset;
+        max-height: 40%;
+        aspect-ratio: 2 / 3 !important;
+        
+    }
+
     .shifted-border {
         display: none;
+    }
+
+    .about-txt{
+        width: 90%;
+        top: 60vh;
+        left: 5vw;
+        max-width: unset;
+        font-size: 1.5vh;
+    }
+
+    .about-txt-ext {
+        width: 90%;
+        top: 60vh;
+        left: 5vw;
+        right: unset;
+        max-width: unset;
+        font-size: 1.5vh;
+    }
+
+    .about-txt.about-more {
+        left: 5vw;
+        top: 15vh;
+    }
+    h1.read-more {
+        top: unset;
+        bottom: 5vh;
+        left: 5vw;
     }
 }
 
