@@ -155,6 +155,7 @@ body {
 
 
 .intro-home-container {
+    position: relative;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -315,15 +316,17 @@ h1.btn:hover {
 
 
 div.page {
+    position: relative;
     width: 100vw;
     height: 100vh;
 }
 
 .about-title {
-    margin-top: 10vh;
+    position: absolute;
+    top: 3vh;
+    right: 10vh;
     font-family: Roboto Mono;
     font-size: 10vh;
-    margin-left: 80vh;
 }
 
 .about-title::after {
@@ -332,7 +335,7 @@ div.page {
     background-color: #000000;
     width: 80%;
     height: 1vh;
-    margin-left: -35vh;
+    margin-left: -15vh;
     border-radius: 35vh;
     
 }
@@ -360,7 +363,7 @@ div.page {
     position: absolute;
     top: 25vh;
     left: 10vh;
-    height: 60vh;
+    width: 40vh;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
     transition: 1s ease;
     
@@ -369,9 +372,10 @@ div.page {
 .about-txt {
     position: absolute;
     top: 30vh;
-    right: 10vh;
+    left: 47%;
     text-align: justify;
     width: 75vh;
+    max-width: 40%;
     font-family: Roboto Mono;
     font-size: 1.8vh;
     transition: 1s ease;
@@ -384,6 +388,7 @@ div.page {
     position: absolute;
     top: 30vh;
     right: 10vh;
+    max-width: 40%;
     text-align: justify;
     width: 60vh;
     font-family: Roboto Mono;
@@ -397,6 +402,7 @@ div.page {
     position: absolute;
     top: 30vh;
     right: 10vh;
+    max-width: 40%;
     text-align: justify;
     width: 60vh;
     font-family: Roboto Mono;
@@ -406,7 +412,7 @@ div.page {
 
 
 .about-txt.about-more {
-    right: 78vh;
+    left: 6vh;
     transition: 1s ease;
 }
 .about-img.about-more {
@@ -420,14 +426,13 @@ div.page {
 }
 
 h1.read-more.about-more {
-    left: 10vh;
+    left: 6vh;
 }
 
 h1.read-more {
     position: absolute;
-    top: 55vh;
-    right: 69vh;
-
+    top: 65vh;
+    left: 47%;
 }
 
 .proj-img {
