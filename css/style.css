@@ -522,7 +522,8 @@ h1.read-more {
     top: calc(50% - 30vh);
     left: 15vh;
     width: 60vh;
-    height: 60vh;
+    aspect-ratio: 1 / 1 !important;
+    max-width: 35%;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
     background-image: url("/media/cover.png");
     background-position: center;
@@ -535,18 +536,19 @@ h1.read-more {
 .music-txt {
     position: absolute;
     top: calc(50% - 28vh);
-    right: 10vh;
+    left: 55%;
     width: 65vh;
     font-family: Roboto Mono;
     font-weight: 400;
     font-size: 1.8vh;
     text-align: justify;
+    max-width: 40%;
 }
 
 .listen {
     position: absolute;
-    right: 53vh;
-    top: calc(50% + 2vh);
+    left: 55%;
+    top: calc(50% + 23vh - 10vw);
     padding: 1.2vh 7vh !important;
 }
 
@@ -557,11 +559,14 @@ h1.read-more {
     align-items: center;
     position: absolute;
     top: calc(50% - 30vh);
-    right: 15vh;
+    right: 10%;
     width: 70vh;
     height: 60vh;
-    font-size: 12vh;
-    font-weight: 500;
+    aspect-ratio: 7 / 6 !important;
+    max-width: 41%;
+    max-height: 40vw;
+    font-size: 7.5vw;
+    font-weight: 400;
     font-family: Helvetica-Compressed;
     letter-spacing: 0.5vh;
     text-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.25);
@@ -600,12 +605,12 @@ h1.read-more {
     font-size: 1.8vh;
     font-weight: 400;
     text-align: justify;
-    
+    max-width: 35%;
 }
 
 .view-photos {
     position: absolute;
-    top: calc(50% + 3vh);
+    top: calc(50% + 28vh - 10vw);
     left: 10vh;
 
 }
