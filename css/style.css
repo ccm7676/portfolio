@@ -439,7 +439,7 @@ h1.read-more {
     position: absolute;
     width: 40vh;
     height: 60vh;
-    right: 30vh;
+    right: calc(5% + 6vh);
     top: 15vh;
     z-index: 78;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
@@ -491,15 +491,16 @@ h1.read-more {
     font-family: Roboto Mono;
     font-weight: 400;
     width: 65vh;
+    max-width: 43%;
     top: 30vh;
-    left: 15vh;
+    left: 10%;
     text-align: justify;
 }
 
 .view-proj {
     position: absolute;
-    top: 60vh;
-    left: 15vh;
+    top: calc(70vh - 4vw);
+    left: 10%;
 }
 
 .dotted-dropshadow {
@@ -508,7 +509,7 @@ h1.read-more {
     height: 60vh;
     background: url(/media/dots.png) top right / 3vh 3vh ;
     top: 10vh;
-    right: 25vh;
+    right: 5%;
     animation: textload 1s ease;
     animation-play-state: var(--proj-state);
 }
