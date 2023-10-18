@@ -6,38 +6,41 @@
     <title>Carl Marino | Programming & Webdesign Projects</title>
     <meta name="keywords" content="Carl, Marino, Software, Development, Programming, Photography, About, Website, Webpage, Contact, Music, Composition, Composer, Songs, Programs, Projects, Photos, Works, Code, Github, LinkedIn, Web, Finance, Personal Info, Articles, Info, Linux, Commandline, Morsy, Portfolio, Site, Investments, Investor, Invest,">
     <link rel="preload" href="/css/projects.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/locomotive-scroll.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/css/projects.css"></noscript>
+
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<meta name="description" content="Carl Marino is a Software Developer, Web Designer, Photographer, and Electronic Music Composer from Germany.">
 </head>
-<body>
-    <div class="side-bar">
+<body data-scroll-container>
+    <div class="side-bar" data-scroll-section>
         <h1>MORSY</h1>
         <p>Morsy is an open-source private messenger. Many private messengers nowadays have one major fault, which is the centralized nature of the servers which the messages are sent through.  Morsy's primary aim is to provide privacy to its users while requiring zero trust in the servers. This is achieved by using WebRTC to send the messages directly between users, making the server's sole purpose to provide the initial connection. </p>
         <a class="btn" href="https://github.com/MorsyApp/Morsy">View Code</a>
     </div>
-    <div class="side-bar">
+    <div class="side-bar" data-scroll-section>
         <h1>KENATOR</h1>
         <p>Kenator is a simple diabetes calculator. It is designed to simplify the process of calculating the amount of insulin units needed to be injected for a given amount of food. It has a modern and clearly labeled user interface and web based, which makes it accessible on almost any device.  </p>
         <div><a class="btn" href="https://github.com/ccm7676/kenator">View Code</a><a class="btn" href="https://ccm7676.github.io/kenator">Visit Site</a></div>
     </div>
-    <div class="side-bar">
+    <div class="side-bar" data-scroll-section>
         <h1>SUDOKUH</h1>
         <p>SudoKuh is a Sudoku app written in python. Unlike many other Sudoku apps, SudoKuh doesn't have preprogrammed puzzles, instead it generates them using a custom algorithm with varying difficulties. </p>
-        <a class="btn" href="https://github.com/MorsyApp/Morsy">View Code</a>
+        <a class="btn" href="https://github.com/ccm7676/sudokuh">View Code</a>
     </div>
-    <div class="image-container">
-        <div class="sub morsy">
-            <img src="/media/morsy.png" alt="">
+    <div class="image-container" data-scroll-section>
+        <div class="sub morsy" >
+            <img src="/media/morsy.avif" alt="" >
         </div>
-        <div class="sub kenator">
-            <img src="/media/kenator.png" alt="" srcset="">
+        <div class="sub kenator" >
+            <img src="/media/kenator.avif" alt="" srcset="">
         </div>
-        <div class="sub sudokuh">
-            <img src="/media/sudokuh.png" alt="" srcset="">
+        <div class="sub sudokuh" >
+            <img src="/media/sudokuh.avif" alt="" srcset="">
         </div>
     </div>
-
+    <script src="/libs/locomotive-scroll.min.js"></script>
     <script src="/loco.js"></script>
+    
 </body>
 </html>

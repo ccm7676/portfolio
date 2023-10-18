@@ -528,7 +528,7 @@ h1.read-more {
     aspect-ratio: 1 / 1 !important;
     max-width: 35%;
     box-shadow: 2vh 2vh 5vh 0vh rgba(0, 0, 0, 0.25);
-    background-image: url("/media/cover.png");
+    background-image: url("/media/cover.avif");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

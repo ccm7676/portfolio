@@ -80,7 +80,7 @@ a.btn:hover {
 .image-container {
     position: absolute;
     width: 50vw;
-    height: 100vh;
+    height: 300vh;
     right: 0;
     top: 0;
 }
