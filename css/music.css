@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Roboto Mono;
+    src: url(/fonts/RobotoMono-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #b4cbff;
+}
+
+body {
+    background-color: var(--accent);
+}
+.player-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60vh;
+}
+
+.cover {
+    background-image: url(/media/azure-cover.avif);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(1.5);
+    border-radius: 1vh;
+    width: 20vh;
+    height: 20vh;
+}
+
+.song-name {
+    font-family: Roboto Mono;
+    margin-left: 3vh;
+    margin-top: 1.5vh;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.year {
+    position: absolute;
+    top: 7vh;
+    left: 23vh;
+    font-size: 2vh;
+    font-family: Roboto Mono;
+}
+
+.progress-bar {
+    position: absolute;
+    left: 23vh;
+    border-radius: 2vh;
+    top: 11vh;
+    background-color: #0000003f;
+    width: 35vh;
+    height: 0.5vh;
+}
+
+.backwards {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 14vh;
+    left: 30vh;
+}
+
+.play-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 14vh;
+    left: 40.5vh;
+}
+
+.play-btn path{
+    fill: #000000;
+}
+
+.forwards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 14vh;
+    left: 49vh;
+}
