@@ -10,11 +10,12 @@
 }
 
 :root {
-    --accent: #b4cbff;
+    --accent: #72abff;
 }
 
 body {
     background-color: var(--accent);
+    transition: 0.5s ease;
 }
 .player-container {
     display: flex;
@@ -34,6 +35,7 @@ body {
     border-radius: 1vh;
     width: 20vh;
     height: 20vh;
+    transition: 1s ease;
 }
 
 .song-name {
@@ -53,14 +55,23 @@ body {
 }
 
 .progress-bar {
+    -webkit-appearance: none;
+    outline: none;
     position: absolute;
+    accent-color: #000000;
     left: 23vh;
     border-radius: 2vh;
     top: 11vh;
-    background-color: #0000003f;
     width: 35vh;
     height: 0.5vh;
+    background: #00000055;
+    background-image: linear-gradient(#000000, #000000);
+    background-size: 10% 100%;
+    background-repeat: no-repeat;
+    transition: 0.1s ease;
 }
+
+
 
 .backwards {
     position: absolute;
@@ -69,6 +80,7 @@ body {
     justify-content: center;
     top: 14vh;
     left: 30vh;
+    transform: translateX(-50%);
 }
 
 .play-btn {
@@ -76,10 +88,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 14vh;
+    top: 15.2vh;
     left: 40.5vh;
+    width: 3vh;
+    transform: translate(-50%,-50%);
+    transition: 0.2s ease;
 }
 
+.play-btn:hover {
+    width: 3.5vh;
+}
 .play-btn path{
     fill: #000000;
 }
@@ -90,5 +108,6 @@ body {
     justify-content: center;
     position: absolute;
     top: 14vh;
-    left: 49vh;
+    left: 51vh;
+    transform: translateX(-50%);
 }
