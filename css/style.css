@@ -302,6 +302,29 @@ h1.btn:hover {
     margin-right: 0.3vh;
 }
 
+a.btn {
+    border: 0.3vh var(--fg-color) solid;
+    width: fit-content;
+    padding: 1.2vh 2.5vh;
+    border-radius: 4vh;
+    font-family: Roboto Mono;
+    font-size: 2vh;
+    font-weight: 400;
+    transition: 200ms ease;
+    cursor: none;
+    color: var(--fg-color);
+    text-decoration: none;
+}
+
+a.btn:hover {
+    background-color: #000000;
+    border: 0.3vh #000000 solid;
+    color: var(--background-color);
+    transition: 200ms ease;
+    margin-top: 0.5vh;
+    margin-right: 0.3vh;
+}
+
 
 div.page {
     position: relative;
