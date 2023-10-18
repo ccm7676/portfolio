@@ -694,7 +694,8 @@ h1.read-more {
 
     .intro-home img {
         width: 90%;
-        right: 5%;
+        right: 50%;
+        transform: translateX(50%);
         bottom: 20vh;
         height: unset;
         aspect-ratio: 2 / 3 !important;
@@ -720,12 +721,13 @@ h1.read-more {
 
     .about-img{
         top: 11vh;
-        left: 5vw;
-        width: 90%;
-        height: unset;
+        left: 50%;
+        transform: translateX(-50%);
         aspect-ratio: 2 / 3 !important;
+        width: unset;
+        height: 50%;
+        
         max-width: unset;
-        max-height: 50%;
         
         
     }
@@ -757,7 +759,7 @@ h1.read-more {
     }
     h1.read-more {
         top: unset;
-        bottom: 5vh;
+        bottom: 13vh;
         left: 5vw;
     }
 }
