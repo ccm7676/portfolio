@@ -46,3 +46,7 @@ Btns.forEach((el) => {
         document.documentElement.style.setProperty("--cursor-state","showcursor")
     })
 })
+
+document.addEventListener("touchstart", ()=> {
+    cursor.style.setProperty("display", "none");
+})

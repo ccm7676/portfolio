@@ -561,19 +561,12 @@ h1.read-more {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: calc(50% - 30vh);
+    top: 50%;
+    transform: translateY(-50%);
     right: 10%;
-    width: 70vh;
-    height: 60vh;
-    aspect-ratio: 7 / 6 !important;
+    width: 60vh;
+    aspect-ratio: 6.3 / 6 !important;
     max-width: 41%;
-    max-height: 40vw;
-    font-size: 7.5vw;
-    font-weight: 400;
-    font-family: Helvetica-Compressed;
-    letter-spacing: 0.5vh;
-    text-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.25);
-    line-height: 10vh;
 
     background-image: url("/media/Moon-1.avif");
     background-image: image-set(
@@ -593,8 +586,6 @@ h1.read-more {
 
     background-position: center;
     background-size: cover;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
     animation: whitefade 1s ease;
     animation-play-state: var(--photo-state);
 }
