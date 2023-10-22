@@ -768,6 +768,43 @@ h1.read-more {
         bottom: 13vh;
         left: 5vw;
     }
+
+    .proj-img {
+        top: 12vh;
+        left: 50%;
+        transform: translateX(-50%);
+        aspect-ratio: 2 / 3 !important;
+        width: unset;
+        height: 50%;
+        max-width: unset;
+    }
+
+    .proj-title {
+        top: 0;
+        font-size: 6vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    .proj-txt{
+        width: 90%;
+        top: 64vh;
+        left: 5vw;
+        right: unset;
+        max-width: unset;
+        font-size: 1.5vh;
+    }
+
+    .view-proj {
+        top: unset;
+        bottom: 10vh;
+        left: 5vw;
+    }
+
+    .dotted-dropshadow {
+        display: none;
+    }
 }
 
 @keyframes unblur {
