@@ -49,8 +49,6 @@ function pageHandler(deltaY) {
             break;
         case 2:
             document.documentElement.style.setProperty("--background-color", "#FFFFFF");       
-            document.documentElement.style.setProperty("--proj-state", "running");     
-            writeAnim();
             break;
         case 3:
             document.documentElement.style.setProperty("--background-color", "#C4C9D3");
@@ -76,6 +74,13 @@ const observer = new IntersectionObserver((e) => {
             }
         }
 
+        if(entry.target.classList.contains("proj-title")) {
+            if(entry.isIntersecting){
+                writeAnim();
+            }
+            
+        }
+
         
     })
 })
@@ -83,5 +88,5 @@ const observer = new IntersectionObserver((e) => {
 
 
 observer.observe(aboutTitle);
-
+observer.observe(programmingTxt);
 fadeElems.forEach((el) => observer.observe(el));
