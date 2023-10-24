@@ -80,7 +80,7 @@ a.btn:hover {
 .image-container {
     position: absolute;
     width: 50vw;
-    height: 300vh;
+    height: 500vh;
     right: 0;
     top: 0;
 }
@@ -111,6 +111,10 @@ a.btn:hover {
     background-color: #ffe3e5;
 }
 
-.stats {
-    background-color: #bedbff;
+.altr{
+    background-color: hsl(246, 100%, 92%);
+}
+
+.synth {
+    background-color: #c7ffee;
 }
