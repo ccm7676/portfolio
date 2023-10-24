@@ -32,7 +32,7 @@
     --fg-color: #000000;
     --proj-state: paused;
     --music-state: running;
-    --photo-state: paused;
+    --photo-state: running;
     --menu-state: none;
     --cursor-state: hidecursor;
     --load-state: loadlogo;
@@ -811,6 +811,30 @@ h1.read-more {
     }
 
     .listen {
+        top: unset;
+        bottom: 20vh;
+        left: 5vw;
+    }
+
+    .photo-img {
+        top: 2vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: unset;
+        aspect-ratio: 1 / 1 !important;
+    }
+
+    .photo-txt {
+        width: 90%;
+        top: 50vh;
+        left: 5vw;
+        right: unset;
+        max-width: unset;
+        font-size: 1.5vh;
+    }
+
+    .view-photos {
         top: unset;
         bottom: 20vh;
         left: 5vw;
