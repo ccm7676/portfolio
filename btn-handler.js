@@ -11,9 +11,7 @@ pageBtns.forEach((el) => {
     el.addEventListener("click", ()=> {
 
         let docStyle = document.documentElement.style;
-        let urlPath = el.innerHTML.toLowerCase() == "home" ? "" : "#" + el.innerHTML.toLocaleLowerCase();
 
-        window.history.pushState("page", "Title", "/" + urlPath);
 
         activeElement.classList.remove("active")
         activeElement = el;
