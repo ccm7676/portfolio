@@ -805,6 +805,8 @@ h1.read-more {
     .dotted-dropshadow {
         display: none;
     }
+
+    
 }
 
 @keyframes unblur {
