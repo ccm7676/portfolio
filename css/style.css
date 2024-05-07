@@ -664,6 +664,12 @@ h1.read-more {
 
 @media screen and (max-width: 1000px){ 
 
+    div.page {
+        margin-bottom: 10vh;
+    }
+    .copyright {
+        position:fixed;
+    }
     .intro-home {
         width: 100vw;
         height: 100vh;
@@ -696,6 +702,11 @@ h1.read-more {
 
     svg.arrow {
         bottom: 15vh;
+    }
+
+    .menu a {
+        font-size: 20vw;
+        
     }
 
     .about-title {
